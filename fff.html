@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+
+window.color="red";
+    var o={color:"blue"};
+    function saycolor(){
+        alert(this.color);
+    }
+     saycolor.call();//red
+    saycolor.call(o);//blue
+    saycolor(o);//red
+   var say=saycolor.bind(o);
+    say();
+    var b=function(){
+        return 10;
+    };
+    alert(b);
+    alert(b());
+    var gol=document.getElementById("dd");
+</script>
+</html>

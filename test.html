@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="head"></div>
+<div class="sec"></div>
+<canvas id="co"  width="1000" height="1000"></canvas>
+
+</body>
+<script type="text/javascript">
+
+    var canvas = document.getElementById("co");
+    var context = canvas.getContext("2d");
+    canvas.addEventListener("click", function (evt) {
+        var mousePos = getMousePos(canvas, evt);
+        context.beginPath();
+        context.arc(mousePos.x , mousePos.y,50,0,Math.PI*2, true);
+        context.lineWidth = 1.0;
+        context.strokeStyle = "#000";
+        context.stroke();
+
+    }, false);
+
+    //Get Mouse Position
+    function getMousePos(canvas, evt) {
+        var rect = canvas.getBoundingClientRect();
+        return {
+            x: evt.clientX - rect.left,
+            y: evt.clientY - rect.top
+        };
+    }
+
+</script>
+</html>

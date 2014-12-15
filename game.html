@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<canvas class="circle"></canvas>
+</body>
+<script type="text/javascript">
+    var a=document.getElementsByClassName('circle');
+   var c= a.getContext("2d");
+  var object= new Object();
+    object.a=5;
+    object.onclick=function(){
+        alert("kk");
+    };
+    var d={
+        a:5,
+        click:function(){
+         alert("kk")
+        }
+
+    };
+    var name='haha';
+    var foo={
+        name:'hehe',
+        bar:function(){
+            alert(this.name);
+        }
+    };
+    foo.bar();
+    var myFn=foo.bar;
+    myFn();
+
+    var people={
+        name:'',
+        age:'',
+        sex:''
+    };
+    var student={
+
+    }
+</script>
+</html>
